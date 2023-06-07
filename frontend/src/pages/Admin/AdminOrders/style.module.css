@@ -1,0 +1,51 @@
+.btnContainer {
+    position:absolute;
+    top:60px;
+    right:15px;
+    font-size:22px;
+    height: 80px;
+    display: flex; /* Ajout d'une propriété flex pour aligner les boutons horizontalement */
+    align-items: center;
+}
+.btnSee {
+    background-color:rgba(162, 196, 254, 0.703);
+    max-width: 150px;
+    border: 2px solid rgba(146, 183, 248, 0.703);
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    height: 100%;
+}
+
+.btnSee:hover {
+    background-color:rgba(146, 183, 248, 0.703);
+}
+
+.btnAll {
+    background-color: rgb(251, 238, 172);
+    border: 2px solid orange;
+    max-width: 150px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 100%;
+}
+
+.btnAll:hover {
+    background-color:orange;
+}
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 120px;
+}
+
+.emptyContainer {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+@media screen and (max-width:700px) {
+    .btnContainer {
+        font-size:18px;
+    }
+}

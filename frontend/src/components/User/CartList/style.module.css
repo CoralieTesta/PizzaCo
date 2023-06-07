@@ -1,0 +1,112 @@
+.container {
+    position: relative;
+}
+
+.title {
+    margin-top: 40px;
+    margin-bottom: 75px;
+}
+
+.emptyBtn {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    background-color: rgba(201, 234, 252, 0.779);
+    border: 2px solid rgb(118, 139, 245);
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.emptyBtn:hover {
+    background-color: rgb(192, 232, 254);
+}
+  
+.th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #f5bdc2;
+    font-size: 20px;
+}
+
+.tableTotal {
+    max-width : 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.total {
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: rgb(23, 22, 22);
+    color: white;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn {
+    font-size: 20px;
+    color: rgb(182, 3, 3);
+    background-color: white;
+    padding: 6px 50px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgb(155, 4, 4);
+}
+
+.btn:hover {
+    background-color: rgb(155, 4, 4);
+    color: white;
+}
+
+
+.emptyContainer {
+    height: 400px;
+    font-size: 22px;
+    padding-top: 200px;
+}
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+.fadeInDown {
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+    .tableTotal {
+        flex-direction: column;
+    }
+    .total {
+        margin-bottom: 30px;
+        margin-left: 0;
+        order: -1;
+        height: 150px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .emptyBtn {
+        top: 55px;
+    }
+}

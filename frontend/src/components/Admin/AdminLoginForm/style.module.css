@@ -1,0 +1,64 @@
+
+.el {
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;  
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.btn {
+    width: 200px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(182, 3, 3);
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid rgb(155, 4, 4);
+}
+
+.btn:hover {
+    color: rgb(182, 3, 3);
+    background-color: white;
+}
+
+.pwAdvise{
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+
+.pwContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.inputPwContainer {
+    display: flex;
+    padding-top: 5px; 
+}
+.inputPw {
+    height:30px;
+    border: solid black 1px;
+    border-right: none;
+    margin-left: 5px;
+    text-align: center;
+    width: 165px;
+}
+
+.inputLogin {
+    height:30px;
+    margin-left: 7px;
+    width: 190px;
+    text-align: center;
+}
+
+.eyeIconContainer {
+    background-color:  #e8f0fe;
+    height: 30px;
+    border: solid black 1px;
+    padding: 0px 2px 4px 2px;
+    cursor: pointer;
+}

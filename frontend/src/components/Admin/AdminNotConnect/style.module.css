@@ -1,0 +1,32 @@
+.container {
+    max-width: 90%;
+    width: 700px;
+    margin: 40px auto;
+}
+
+.title {
+    color: red;
+    margin-bottom: 50px;
+}
+
+.p {
+    color: rgb(36, 35, 35);
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.btn {
+    font-size: 20px;
+    color: rgb(182, 3, 3);
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgb(155, 4, 4);
+}
+
+.btn:hover {
+    background-color: rgb(155, 4, 4);
+    color: white;
+}

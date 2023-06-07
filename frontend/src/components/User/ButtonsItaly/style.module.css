@@ -1,0 +1,49 @@
+.btnContainer {
+    margin-top: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.pizzaBtn {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #008000;
+    color: white;
+    border: 2px solid #008000;
+}
+
+.pizzaBtn:hover {
+    background-color: #036803;
+}
+
+.pastaBtn {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.pastaBtn:hover {
+    background-color: rgb(243, 238, 238);
+}
+
+.dessertBtn {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #d10f0f;
+    color: white;
+    border: 2px solid #d10f0f;
+}
+
+.dessertBtn:hover {
+    background-color: #c00f0f;
+}

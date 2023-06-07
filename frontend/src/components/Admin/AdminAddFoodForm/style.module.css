@@ -1,0 +1,20 @@
+.form {
+    font-size: 18px;
+}
+
+.ingredientContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.removeIcon {
+    padding-left: 5px;
+    margin-top: 5px;
+    color: red;
+    cursor: pointer;
+}
+
+.extraInputContainer {
+    display: flex;
+    margin-bottom: 5px;
+}

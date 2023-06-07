@@ -1,0 +1,114 @@
+.container {
+    margin-top: 50px;
+    font-size: 18px;
+}
+.form {
+    margin-top: 30px;
+    margin-bottom: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 600px;
+    max-width: 90%;
+    background-color: rgb(243, 239, 199);
+    position: relative;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input {
+    font-size: 18px;
+    text-align: center;
+    width: 200px;
+    margin-left: 5px;
+}
+
+.btn {
+    font-size: 20px;
+    color: rgb(182, 3, 3);
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgb(155, 4, 4);
+}
+
+.btn:hover {
+    background-color: rgb(155, 4, 4);
+    color: white;
+}
+
+.paymentBtn {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: rgb(38, 91, 79);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid rgb(38, 91, 79);
+}
+
+.paymentBtn:hover {
+    background-color: rgb(31, 72, 63);
+}
+
+.cancelBtn {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: rgb(14, 14, 120);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid rgb(14, 14, 120);
+}
+
+.cancelBtn:hover {
+    background-color:rgb(8, 8, 87);
+}
+
+
+.attention {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(172, 11, 38);
+    margin-bottom: 15px;
+}
+
+.toPay {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.loader {
+    z-index: 2;
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(248,244,243,255);
+}
+
+@media screen and (max-width:660px) {
+    .line {
+        flex-direction: column;
+        align-items: flex-start;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}

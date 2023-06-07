@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 70px;
+    font-size: 20px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items:baseline;
+    justify-content: space-evenly;
+}
+
+.sizeContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin-bottom: 25px;
+}
+
+.sizeItem{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.price {
+    font-size: 26px;
+    color: red;
+}
+
+.checkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-left: 20px;
+    padding-left: 50px;
+}
+.checkItem {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.label {
+    cursor:pointer;
+}
+
+.qttContainer {
+    margin: 20px 0;
+}
+
+.qtt {
+    font-size: 20px;
+    width: 50px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.btn {
+    font-size: 22px;
+    color: white;
+    background-color: rgb(182, 3, 3);
+    padding: 6px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(155, 4, 4);
+}
+
+.btn:hover {
+    color: rgb(182, 3, 3);
+    background-color: white;
+}
+
+.checkIcon {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.sizeTitle {
+    margin-top: 25px;
+}
+
+.img {
+    max-width: 400px;
+    max-height: 550px;
+}
+
+.desc {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .img {
+        max-width: 90%;
+        max-height: 300px;
+        padding-bottom: 15px; 
+    }
+    .imgContainer {
+     order: 2; /* Change l'ordre d'affichage */
+    }
+    .checkContainer {
+        margin-top: 20px;
+    }
+    .desc {
+        margin-top: 20px;
+    }
+    .sizeContainer {
+        justify-content: space-between;
+    }
+    .sizeItem{
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .checkContainer {
+        margin-left: 30px;
+        padding-left: 0px;
+    }
+    .extraPrice {
+        display: block;
+    }
+}

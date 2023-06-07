@@ -1,0 +1,28 @@
+.container {
+    background-color: rgb(182, 3, 3);
+    font-size: 20px;
+    padding: 20px;
+    text-align: right;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.p { 
+    margin-right: 30px;
+}
+
+.icon {
+    padding-right: 1px;
+    color: white;
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        flex-direction: column;
+    }
+    .p { 
+        margin-right: 0px;
+    }
+}

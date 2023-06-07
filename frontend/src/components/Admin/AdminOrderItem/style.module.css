@@ -1,0 +1,48 @@
+.container {
+    margin: 40px 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.customerInfo {
+    margin-left: 50px;
+}
+
+.info {
+    margin-top: 5px;
+}
+
+.archiveBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(251, 238, 172);
+    border: 1px solid orange;
+}
+
+.archiveBtn:hover {
+    background-color: orange;
+}
+
+.deleteBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(249, 176, 176);
+    border: 1px solid red;
+}
+
+.deleteBtn:hover {
+    background-color: red;
+}
+@media  screen and (max-width:400px) {
+    .customerInfo {
+        margin-left: 5px;
+    }
+
+    .container {
+        margin: 20px 5px;
+    }
+}

@@ -1,0 +1,25 @@
+.pizza-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .pizza-icon {
+    animation: spin 3s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+@media screen and (max-width:900px) {
+  .pizza-spinner {
+    height: 40vh;
+  }
+}

@@ -1,0 +1,75 @@
+.nav {
+    background-color: rgb(182, 3, 3);
+    font-size: 25px;
+    height: 280px;
+    font-weight: 700;
+}
+
+.ul {
+    width: 90%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.centralItems {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.li {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:pointer;
+    position: relative;
+}
+
+.li:hover {
+    scale: 1.1;
+}
+.subButtonsLi {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:pointer;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.subButtonsContainer {
+    position: absolute;
+    top:80px;
+    left: -35px;
+    z-index: 9;
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    padding: 20px;
+    min-width: 150px;
+}
+
+.cartItemCount {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  @media screen  and (max-width: 655px) {
+    .nav {
+        height: 330px;
+    }
+  }

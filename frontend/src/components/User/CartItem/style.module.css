@@ -1,0 +1,49 @@
+.tr {
+    margin: auto;
+}
+
+.tr:nth-child(even) {
+    background-color: white;
+}
+
+.tr:nth-child(odd) {
+    background-color: #faf9f9a9;
+}
+
+.tr:hover {
+    background-color: #f7dee0;
+}
+
+.td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.binIcon {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.binIcon:hover {
+    color: red;
+}
+
+.minusIcon {
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 2px;
+    color:blue;
+}
+
+.minusIcon:hover {
+    color:red;
+}
+
+.plusIcon {
+    cursor: pointer;
+    color:blue;
+}
+
+.plusIcon:hover {
+    color:red;
+}

@@ -1,0 +1,52 @@
+.container {
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la div */
+    background-position: center; /* Centre l'image dans la div */
+    background-repeat: no-repeat;
+    width: 380px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+    background-color: white;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.innerContainer {
+    background-color: rgba(254, 255, 255, 0.669);
+    height: 100%;
+}
+
+.innerContainer:hover {
+    background-color: white;
+}
+
+.textContainer {
+    padding: 7px 5px;
+    color: black;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    color: white;
+    background-color: rgb(182, 3, 3);
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(155, 4, 4);
+}
+
+.btn:hover {
+    color: rgb(182, 3, 3);
+    background-color: white;
+}

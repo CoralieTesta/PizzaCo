@@ -1,0 +1,28 @@
+.formContainer {
+    background-color: rgba(226, 224, 222, 0.847);
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3xp grey;
+}
+
+.btn {
+    width: 200px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(182, 3, 3);
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(155, 4, 4);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    color: rgb(182, 3, 3);
+    background-color: white;
+}
