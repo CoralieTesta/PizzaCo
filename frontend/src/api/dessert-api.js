@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "http://localhost:3000/api/dessert"
+const BASE_URL = "https://pizzaco.onrender.com/api/dessert"
 
 export class DessertAPI {
     static async getAll() {

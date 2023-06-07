@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "http://localhost:3000/api/auth"//"http://localhost:3000/api/auth"
+const BASE_URL = "https://pizzaco.onrender.com/api/auth"//"http://localhost:3000/api/auth"
 
 
 export class UserAPI{
