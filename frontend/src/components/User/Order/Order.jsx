@@ -1,22 +1,65 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import s from "./style.module.css"
 import CartList from '../CartList/CartList';
 import { FcMoneyTransfer } from "react-icons/fc";
 import { AiOutlineCheck } from 'react-icons/ai';
+import PDFDocument from '../PDFDocument/PDFDocument';
 const Order = ({order}) => {
     const {_id, customer, address, method, status, total, pizzas, pasta, desserts} = order
     const [showDetails, setShowDetails] = useState(false);
-    
+    const currentDate = new Date();
+  const months = [
+    'janvier',
+    'février',
+    'mars',
+    'avril',
+    'mai',
+    'juin',
+    'juillet',
+    'août',
+    'septembre',
+    'octobre',
+    'novembre',
+    'décembre',
+  ];
+  const formattedDate = `${currentDate.getDate()} ${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
     const toggleDetails = () => {
         setShowDetails(!showDetails);
       };
+
 
   return (
     <div className={s.container}>
         
         <div className={s.saved}>
             Félicitations ! Votre commande a été confirmée avec succès. <AiOutlineCheck size={25}/>
+        </div>
+        <div>
+            <div className={s.downloadText}>Téléchargez la confirmation de votre commande :</div>
+            <PDFDocument
+                formattedDate={formattedDate} 
+                time={currentTime}
+                id={_id}
+                customer={customer}
+                address={address}
+                pizzas={pizzas}
+                pasta={pasta}
+                desserts={desserts}
+                total={total}
+                method={method}
+            />
         </div>
         <h1 className={`${s.title} ${s.fadeInDown}`}>Récapitulatif de la commande :</h1>
         <div className={s.innerContainer}>

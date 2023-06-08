@@ -38,7 +38,7 @@
     margin-left: auto;
     margin-top: 20px;
     margin-bottom: 40px;
-    display: flex;
+    
 }
 
 .total {
@@ -93,9 +93,11 @@
     animation: fadeInDown 1.5s ease-in-out;
 }
 
+
+
 @media screen and (max-width: 900px) {
     .tableTotal {
-        flex-direction: column;
+        display: block;
     }
     .total {
         margin-bottom: 30px;

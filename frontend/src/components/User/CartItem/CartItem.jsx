@@ -2,6 +2,7 @@ import React from 'react'
 import { Tr, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import s from "./style.module.css"
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import { ImBin } from 'react-icons/im';
 import { useDispatch } from 'react-redux';
 import { addOne, addOneDessert, addOnePasta, addOnePizza, deleteFood, removeOne, removeOneDessert, removeOnePasta, removeOnePizza } from '../../../store/cart-slice';
@@ -18,22 +19,13 @@ const CartItem = ({food, type, showItems, showPrices}) => {
     <Tr className={s.tr}>
         <Td className={s.td}>{title}</Td>
         {type=== "dessert" ?
-          (<>
-            <Td className={s.td}>
-                
-            </Td>
-            <Td className={s.td}></Td>
-            <Td className={s.td}></Td>
-          </>
-          )
-          :
-          (<>
-            <Td className={s.td}>
-                {sizeName}
-            </Td>
-            <Td className={s.td}><ul>{extras.map((extra)=> (<li key={extra}>{extra}</li>))}</ul></Td>
-            <Td className={s.td}><ul>{removedIngredients.map((ingredient)=> (<li key={ingredient}>{ingredient}</li>))}</ul></Td>
-          </>)
+          (<Td className={s.td}> </Td>):(<Td className={s.td}>{sizeName}</Td>)
+        }
+        {type=== "dessert" ?
+          (<Td className={s.td}> </Td>):(<Td className={s.td}><ul>{extras.map((extra)=> (<li key={extra}>{extra}</li>))}</ul></Td>)
+        }
+        {type=== "dessert" ?
+          (<Td className={s.td}> </Td>):(<Td className={s.td}><ul>{removedIngredients.map((ingredient)=> (<li key={ingredient}>{ingredient}</li>))}</ul></Td>)
         }
         {showPrices &&
           <Td className={s.td}>{price}€</Td>

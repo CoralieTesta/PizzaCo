@@ -6,6 +6,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { store } from "../../../store";
 
+
 export function NavALarge() {
   const quantity = useSelector((store) => store.CART.quantity);
   const [isShown, setIsShown] = useState(false);
