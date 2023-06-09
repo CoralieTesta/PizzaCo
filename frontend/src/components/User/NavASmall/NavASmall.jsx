@@ -25,18 +25,24 @@ export function NavASmall() {
         };
     }, []);
 
-    function toggleIsShown() {
-        isShown ? setIsShown(false) : setIsShown(true)
-    }
-
     return(
         <nav className={s.nav}>
             <NavLink to="/" className={s.pizzaIcon}><div style={{color:"white"}}><CiPizza size={40}/>PizzaCo</div></NavLink>
+            <NavLink to="/cart" className={s.pizzaIcon}>
+                <div style={{color:"white"}}>
+                <AiOutlineShoppingCart 
+                size={40} 
+                className={s.descriptiveIcon} 
+                style={{paddingBottom:"5px"}}
+                /> 
+                </div>
+            </NavLink>
             <AiOutlineMenu  
                 className={s.menuIcon} 
                 size={25}
                 onClick={(event)=> {event.stopPropagation(); setIsMenuShown(true)}}
             />
+            
             {isMenuShown &&
                     <div 
                         ref={menuRef}

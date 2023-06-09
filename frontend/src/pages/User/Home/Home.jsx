@@ -56,9 +56,9 @@ const Home = () => {
     <div>
         <Hero/>
         <HomePresentation/>
-        <FoodList list={pizzaList} type="pizza"/>
-        <FoodList list={pastaList} type="pasta"/>
-        <FoodList list={dessertList} type="dessert"/>
+        {pizzaList && <FoodList list={pizzaList} type="pizza"/>}
+        {pastaList && <FoodList list={pastaList} type="pasta"/>}
+        {dessertList && <FoodList list={dessertList} type="dessert"/>}
     </div>
   )
 }

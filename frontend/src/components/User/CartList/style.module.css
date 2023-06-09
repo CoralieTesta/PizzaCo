@@ -10,7 +10,7 @@
 .emptyBtn {
     position: absolute;
     top: 35px;
-    right: 25px;
+    left: 25px;
     background-color: rgba(201, 234, 252, 0.779);
     border: 2px solid rgb(118, 139, 245);
     font-size: 18px;
@@ -38,7 +38,7 @@
     margin-left: auto;
     margin-top: 20px;
     margin-bottom: 40px;
-    
+    display: flex;
 }
 
 .total {

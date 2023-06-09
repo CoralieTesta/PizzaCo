@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { PastaAPI } from '../../../api/pasta-api';
 import { useDispatch } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
+import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
 
 const Pastas = () => {
   const [pastaList, setPastaList] = useState()
@@ -35,11 +36,19 @@ const Pastas = () => {
       }     
   }
   }, []);
-  return (
+  if(pastaList) {
+    return (
+      <div>
+          <FoodList list={pastaList} type="pasta"/>
+      </div>
+    )
+  }
+  else {
+    return (
     <div>
-        <FoodList list={pastaList} type="pasta"/>
-    </div>
-  )
+      <PizzaLoader/>
+    </div>)
+  }
 }
 
 export default Pastas

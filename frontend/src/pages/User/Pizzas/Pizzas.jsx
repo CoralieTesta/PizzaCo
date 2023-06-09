@@ -3,6 +3,7 @@ import { PizzaAPI } from '../../../api/pizza-api';
 import FoodList from '../../../components/User/FoodList/FoodList';
 import { useDispatch } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
+import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
 
 const Pizzas = () => {
   const [pizzaList, setPizzaList] = useState()
@@ -32,11 +33,19 @@ const Pizzas = () => {
       }     
   }
     }, []);
-  return (
+  if(pizzaList) {
+    return (
+      <div>
+          <FoodList list={pizzaList} type="pizza"/>
+      </div>
+    )
+  }
+  else {
+    return (
     <div>
-        <FoodList list={pizzaList} type="pizza"/>
-    </div>
-  )
+      <PizzaLoader/>
+    </div>)
+  }
 }
 
 export default Pizzas

@@ -1,44 +1,57 @@
-import React from 'react'
+import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { DessertAPI } from '../../../api/dessert-api';
 import FoodList from '../../../components/User/FoodList/FoodList';
 import { useDispatch } from 'react-redux';
-import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
+import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice';
+import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
 
 const Desserts = () => {
-  const [dessertList, setDessertList] = useState()
-  const dispatch=useDispatch()
+  const [dessertList, setDessertList] = useState();
+  const dispatch = useDispatch();
+
   useEffect(() => {
     async function getAllDesserts() {
       const desserts = await DessertAPI.getAll();
-      setDessertList(desserts)
+      setDessertList(desserts);
     }
-    getAllDesserts();
-    const data = localStorage.getItem('cart')
-    const parseData = JSON.parse(data)
-    if(parseData) {
-      if(parseData.payload) {
-        dispatch(setPizzas(parseData.payload.pizzas))
-        dispatch(setPasta(parseData.payload.pasta))
-        dispatch(setDesserts(parseData.payload.desserts))
-        dispatch(setTotal(parseData.payload.total))
-        dispatch(setQuantity(parseData.payload.quantity))
-      }
-      else {
-        dispatch(setPizzas(parseData.pizzas))
-        dispatch(setPasta(parseData.pasta))
-        dispatch(setDesserts(parseData.desserts))
-        dispatch(setTotal(parseData.total))
-        dispatch(setQuantity(parseData.quantity))
-      }     
-  }
-    }, []);
-  return (
-    <div>
-        <FoodList list={dessertList} type="dessert"/>
-    </div>
-  )
-}
 
-export default Desserts
+    getAllDesserts();
+    const data = localStorage.getItem('cart');
+    const parseData = JSON.parse(data);
+
+    if (parseData) {
+      if (parseData.payload) {
+        dispatch(setPizzas(parseData.payload.pizzas));
+        dispatch(setPasta(parseData.payload.pasta));
+        dispatch(setDesserts(parseData.payload.desserts));
+        dispatch(setTotal(parseData.payload.total));
+        dispatch(setQuantity(parseData.payload.quantity));
+      } else {
+        dispatch(setPizzas(parseData.pizzas));
+        dispatch(setPasta(parseData.pasta));
+        dispatch(setDesserts(parseData.desserts));
+        dispatch(setTotal(parseData.total));
+        dispatch(setQuantity(parseData.quantity));
+      }
+    }
+
+  }, []);
+
+  if (dessertList) {
+    return (
+      <div>
+        <FoodList list={dessertList} type="dessert" />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <PizzaLoader />
+      </div>
+    );
+  }
+};
+
+export default Desserts;

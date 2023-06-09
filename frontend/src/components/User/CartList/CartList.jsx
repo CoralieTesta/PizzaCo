@@ -139,7 +139,7 @@ const CartList = ({pizzas, pasta, desserts, total, showPrices}) => {//si total e
                     <button 
                         type='button' 
                         className={s.btn}
-                        onClick={() => setConfirm(true)}
+                        onClick={() => {window.scrollTo(0, 0); setConfirm(true)}}
                     >
                         Valider
                     </button>

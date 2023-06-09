@@ -65,6 +65,7 @@ const FormCustomer = ({setCancel, total}) => {
                         total:total
                     }, "4hYGBSCs6ktE4hGtY");*/
                 dispatch(reset())
+                window.scrollTo(0, 0);
                 navigate(`/order/${orderId}`)
             })
             .catch(error => {
@@ -101,6 +102,7 @@ const FormCustomer = ({setCancel, total}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Faire quelque chose avec les données du formulaire
+    window.scrollTo(0, 0);
     setFormSubmitted(true)
   };  
 
@@ -142,7 +144,7 @@ const FormCustomer = ({setCancel, total}) => {
                     <button 
                         type='button'
                         className={s.cancelBtn}
-                        onClick={() => setCancel(true)}
+                        onClick={() => {window.scrollTo(0, 0); setCancel(true)}}
                     >
                         Retourner au panier
                     </button>
@@ -239,7 +241,7 @@ const FormCustomer = ({setCancel, total}) => {
                 />
             </div>
         </div>
-        <button type='button' onClick={() => setCancel(true)} style={{marginRight:"10px"}} className={s.btn}>Retour</button>
+        <button type='button' onClick={() => {window.scrollTo(0, 0); setCancel(true);}} style={{marginRight:"10px"}} className={s.btn}>Retour</button>
         <button type="submit" className={s.btn}>Soumettre</button>
         </form>
     </div>
