@@ -4,22 +4,17 @@ import FoodList from '../../../components/User/FoodList/FoodList';
 import { useDispatch } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
 import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
-import FoodCard from '../../../components/User/FoodCard/FoodCard';
+import { setPizzaListMenu } from '../../../store/menu-slice';
 
 const Pizzas = () => {
   const [pizzaList, setPizzaList] = useState()
-  const  [pizzaItem, setPizzaItem] =useState()
   const dispatch=useDispatch()
   useEffect(() => {
     async function getAllPizzas() {
       const pizzas = await PizzaAPI.getAll();
       setPizzaList(pizzas)
+      dispatch(setPizzaListMenu(pizzas))
     }
-    async function getOnePizza() {
-      const pizza = await PizzaAPI.getById("646375e3ca67cb3b34b11d6c");
-      setPizzaItem(pizza)
-    }
-    getOnePizza()
     getAllPizzas();
     const data = localStorage.getItem('cart')
     const parseData = JSON.parse(data)
@@ -40,11 +35,9 @@ const Pizzas = () => {
       }     
   }
     }, []);
-  console.log(pizzaItem)
-  if(pizzaList || pizzaItem) {
+  if(pizzaList) {
     return (
       <div>
-          <FoodCard type="pizza" food={pizzaItem}/>
           <FoodList list={pizzaList} type="pizza"/>
       </div>
     )
