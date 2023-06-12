@@ -4,7 +4,6 @@ import FoodList from '../../../components/User/FoodList/FoodList';
 import { useDispatch } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
 import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
-import { setPizzaListMenu } from '../../../store/menu-slice';
 
 const Pizzas = () => {
   const [pizzaList, setPizzaList] = useState()
@@ -13,7 +12,6 @@ const Pizzas = () => {
     async function getAllPizzas() {
       const pizzas = await PizzaAPI.getAll();
       setPizzaList(pizzas)
-      dispatch(setPizzaListMenu(pizzas))
     }
     getAllPizzas();
     const data = localStorage.getItem('cart')
