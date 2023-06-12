@@ -1,6 +1,7 @@
 const Pizza = require('../models/Pizza')
 
 exports.getAll = (req, res) => {
+  console.log("début du getAll")
     Pizza.find()
     .then(pizzas => res.status(200).json(pizzas))
     .catch(error => res.status(400).json({error}))
