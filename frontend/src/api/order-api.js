@@ -1,6 +1,6 @@
 import axios from 'axios';
-const BASE_URL = "https://pizzaco.onrender.com/api/order"
-
+const BASE_URL ="https://pizzaco.onrender.com/api/order"
+//"http://localhost:3000/api/order"
 export class OrderAPI {
     static async getAll() {
         const response = await axios.get(`${BASE_URL}/allOrders`)
