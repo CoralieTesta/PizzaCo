@@ -3,7 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     pizzaListMenu: [],
     pastaListMenu: [],
-    dessertListMenu:[]
+    dessertListMenu:[],
+    isPizzaListDefined: false,
+    isPastaListDefined: false,
+    isDessertListDefined: false
 };
 
 export const menuSlice = createSlice({
@@ -11,14 +14,13 @@ export const menuSlice = createSlice({
     initialState,
     reducers: {
         setPizzaListMenu: (currentState, action) => {
-            console.log("pay",action.payload)
             currentState.pizzaListMenu = action.payload
         },
         setPastaListMenu: (currentState, action) => {
-            currentState.pastaListMenu = action.payload.pastaList
+            currentState.pastaListMenu = action.payload
         },
         setDessertListMenu: (currentState, action) => {
-            currentState.dessertListMenu = action.payload.dessertList
+            currentState.dessertListMenu = action.payload
         }
     }
 })

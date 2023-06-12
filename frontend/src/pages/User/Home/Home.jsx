@@ -7,26 +7,31 @@ import { PizzaAPI } from '../../../api/pizza-api'
 import { PastaAPI } from '../../../api/pasta-api'
 import { DessertAPI } from '../../../api/dessert-api'
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setDessertListMenu, setPastaListMenu, setPizzaListMenu } from '../../../store/menu-slice'
 
 const Home = () => {
   const [pizzaList, setPizzaList] = useState()
   const [pastaList, setPastaList] = useState()
   const [dessertList, setDessertList] = useState()
+  const pizzaListMenu = useSelector(store => store.MENU.pizzaListMenu)
   const dispatch = useDispatch()
   useEffect(() => {
       async function getAllPizzas() {
         const pizzas = await PizzaAPI.getAll();
         setPizzaList(pizzas)
+        dispatch(setPizzaListMenu(pizzas))
         //localStorage.setItem('pizzas', JSON.stringify(pizzas));
       }
       async function getAllPasta() {
         const pasta = await PastaAPI.getAll();
         setPastaList(pasta)
+        dispatch(setPastaListMenu(pasta))
       }
       async function getAllDesserts() {
         const desserts = await DessertAPI.getAll();
         setDessertList(desserts)
+        dispatch(setDessertListMenu(desserts))
       }
       getAllPizzas();
       getAllPasta();

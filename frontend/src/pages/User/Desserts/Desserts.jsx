@@ -3,21 +3,28 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { DessertAPI } from '../../../api/dessert-api';
 import FoodList from '../../../components/User/FoodList/FoodList';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice';
 import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
+import { setDessertListMenu } from '../../../store/menu-slice';
 
 const Desserts = () => {
   const [dessertList, setDessertList] = useState();
   const dispatch = useDispatch();
+  const dessertListMenu = useSelector(store => store.MENU.dessertListMenu)
 
   useEffect(() => {
     async function getAllDesserts() {
       const desserts = await DessertAPI.getAll();
       setDessertList(desserts);
+      dispatch(setDessertListMenu(desserts))
     }
-
-    getAllDesserts();
+    if(dessertListMenu.length === 0) {
+      getAllDesserts();
+    }
+    else {
+      setDessertList(dessertListMenu)
+    }
     const data = localStorage.getItem('cart');
     const parseData = JSON.parse(data);
 
