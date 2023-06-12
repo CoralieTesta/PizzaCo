@@ -1,6 +1,7 @@
 const Dessert = require('../models/Dessert')
 
 exports.getAll = (req, res) => {
+  console.log("getall dessert")
     Dessert.find()
     .then(desserts => res.status(200).json(desserts))
     .catch(error => res.status(400).json({error}))

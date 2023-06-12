@@ -1,6 +1,7 @@
 const Pizza = require('../models/Pizza')
 
 exports.getAll = (req, res) => {
+  console.log("getall pizza")
     Pizza.find()
     .then(pizzas => {
       console.log(pizzas)

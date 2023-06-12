@@ -1,6 +1,7 @@
 const Pasta = require('../models/Pasta')
 
 exports.getAll = (req, res) => {
+  console.log("getall pasta")
     Pasta.find()
     .then(pasta => {
       return(res.status(200).json(pasta))
