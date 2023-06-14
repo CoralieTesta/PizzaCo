@@ -5,19 +5,26 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CardDetailed from '../../../components/User/CardDetailed/CardDetailed';
 import { DessertAPI } from '../../../api/dessert-api';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
+import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
 
 const Dessert = () => {
   const [dessertItem, setDessertItem] = useState()
   const {_id} = useParams()
   const dispatch=useDispatch()
+  const selectedDessert = useSelector(store => store.MENU.selectedDessert)
   useEffect(() => {
     async function getDessert() {
       const dessert = await DessertAPI.getById(_id);
       setDessertItem(dessert)
     }
-    getDessert();
+    if(Object.entries(selectedDessert).length === 0) {
+      getDessert();
+    }
+    else {
+      setDessertItem(selectedDessert)
+    }
     const data = localStorage.getItem('cart')
     const parseData = JSON.parse(data)
     if(parseData) {
@@ -37,11 +44,19 @@ const Dessert = () => {
       }     
   }
   }, []);
-  return (
+  if(dessertItem) {
+    return (
+      <div>
+          <CardDetailed food={dessertItem} type="dessert"/> 
+      </div>
+    )
+  }
+  else {
+    return (
     <div>
-      <CardDetailed food={dessertItem} type="dessert"/> 
-    </div>
-  )
+      <PizzaLoader/>
+    </div>)
+  }
 }
 
 export default Dessert

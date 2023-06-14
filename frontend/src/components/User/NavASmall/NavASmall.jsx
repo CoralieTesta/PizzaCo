@@ -7,11 +7,13 @@ import s from "./style.module.css"
 import { CiPizza } from "react-icons/ci";
 import { GiHotMeal, GiPizzaSlice } from "react-icons/gi";
 import { TbMessageCircle } from "react-icons/tb";
+import { useSelector } from "react-redux";
 
 export function NavASmall() {
     const [isShown, setIsShown] = useState(false)
     const [isMenuShown, setIsMenuShown] = useState(false)
     const menuRef = useRef(null);
+    const quantity = useSelector((store) => store.CART.quantity);
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -29,14 +31,18 @@ export function NavASmall() {
         <nav className={s.nav}>
             <NavLink to="/" className={s.pizzaIcon}><div style={{color:"white"}}><CiPizza size={40}/>PizzaCo</div></NavLink>
             <NavLink to="/cart" className={s.pizzaIcon}>
-                <div style={{color:"white"}}>
-                <AiOutlineShoppingCart 
-                size={40} 
-                className={s.descriptiveIcon} 
-                style={{paddingBottom:"5px"}}
-                /> 
+                <div style={{ position: "relative" }}>
+                    <div style={{ color: "white" }}>
+                    <AiOutlineShoppingCart
+                        size={40}
+                        className={s.descriptiveIcon}
+                        style={{ paddingBottom: "5px" }}
+                    />
+                    </div>
+                    <div className={s.cartItemCount}>{quantity}</div>
                 </div>
             </NavLink>
+
             <AiOutlineMenu  
                 className={s.menuIcon} 
                 size={25}

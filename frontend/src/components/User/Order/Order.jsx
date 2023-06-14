@@ -7,7 +7,7 @@ import { AiOutlineCheck } from 'react-icons/ai';
 import PDFDocument from '../PDFDocument/PDFDocument';
 const Order = ({order}) => {
     const {_id, customer, address, method, status, total, pizzas, pasta, desserts} = order
-    const [showDetails, setShowDetails] = useState(false);
+    const [showDetails, setShowDetails] = useState(true);
     const currentDate = new Date();
   const months = [
     'janvier',

@@ -1,18 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import s from "./style.module.css"
+import { useDispatch } from 'react-redux'
+import { setSelectedDessert, setSelectedPasta, setSelectedPizza} from '../../../store/menu-slice'
 
 const FoodCard = ({food, foodType}) => {
     const {_id, title, desc, image, prices} = food
-
+    const navigate= useNavigate()
+    const dispatch = useDispatch()
     if(foodType==="pasta") {
       foodType="pates"
+    }
+    const onClickHandler = () => {
+      if (foodType==="pizza") {
+      dispatch(setSelectedPizza(_id))
+      }
+      else if(foodType==="pates") {
+        dispatch(setSelectedPasta(_id))
+      }
+      else {
+        dispatch(setSelectedDessert(_id))
+      }
+      navigate(`/${foodType}/${_id}`)
     }
   return (
     <div style={{
       backgroundImage:`url(${image})`}} className={s.container}
     >
-        <Link className={s.link} to={`/${foodType}/${_id}`}>
+        <div className={s.link} onClick={onClickHandler}>
           <div className={s.innerContainer}>
             <div className={s.textContainer}>
               <h2>{title}</h2>
@@ -28,7 +43,7 @@ const FoodCard = ({food, foodType}) => {
               <button className={s.btn} type='button'>Commander</button>
             </div>
           </div>
-        </Link>
+        </div>
     </div>
   )
 }

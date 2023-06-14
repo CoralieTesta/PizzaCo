@@ -96,6 +96,11 @@ const FormCustomer = ({setCancel, total}) => {
             total: total,
             method:0,//0 for cash
         })
+        return (
+            <div>
+                <PizzaLoader/>
+            </div>
+        )
     }
   }
 
@@ -135,7 +140,7 @@ const FormCustomer = ({setCancel, total}) => {
                         'client-id': 'AbhjyKvE946AIvocAb4HNwYCWrdrujNPOaDBgUDaAENZQJh5EegrS7iSiYuGTA7e-FMbwvSA2aoZVxVR',
                         components: 'buttons',
                         currency: 'EUR',
-                        "disable-funding": 'card,sofort,bancontact',
+                        "disable-funding": 'sofort,bancontact',
                         }}
                     >
                         <ButtonWrapper currency={currency} showSpinner={false} order={order} />

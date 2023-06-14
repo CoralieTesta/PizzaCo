@@ -15,6 +15,8 @@ const Home = () => {
   const [pastaList, setPastaList] = useState()
   const [dessertList, setDessertList] = useState()
   const pizzaListMenu = useSelector(store => store.MENU.pizzaListMenu)
+  const pastaListMenu = useSelector(store => store.MENU.pastaListMenu)
+  const dessertListMenu = useSelector(store => store.MENU.dessertListMenu)
   const dispatch = useDispatch()
   useEffect(() => {
       async function getAllPizzas() {
@@ -33,9 +35,28 @@ const Home = () => {
         setDessertList(desserts)
         dispatch(setDessertListMenu(desserts))
       }
-      getAllPizzas();
-      getAllPasta();
-      getAllDesserts();
+      
+      async function fetchData() {
+        if (pizzaListMenu.length === 0) {
+          await getAllPizzas();
+        } else {
+          setPizzaList(pizzaListMenu);
+        }
+    
+        if (pastaListMenu.length === 0) {
+          await getAllPasta();
+        } else {
+          setPastaList(pastaListMenu);
+        }
+    
+        if (dessertListMenu.length === 0) {
+          await getAllDesserts();
+        } else {
+          setDessertList(dessertListMenu);
+        }
+      }
+    
+      fetchData();
 
       const data = localStorage.getItem('cart')
       const parseData = JSON.parse(data)

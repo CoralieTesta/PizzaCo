@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { reset } from "../../../store/cart-slice";
 import s from "./style.module.css"
+import PizzaLoader from "../PizzaLoader/PizzaLoader";
 
 const { usePayPalScriptReducer, PayPalButtons } = require("@paypal/react-paypal-js");
 const { useEffect } = require("react");
@@ -32,6 +33,11 @@ const ButtonWrapper = ({ currency, showSpinner, order }) => {//order contient cu
         .catch(error => {
           console.log("error")
         })
+        return (
+          <div>
+              <PizzaLoader/>
+          </div>
+      )
   }
   const total = useSelector(store => store.CART.total)
 

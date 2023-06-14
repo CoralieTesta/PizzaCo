@@ -66,7 +66,7 @@ const AdminOrderItem = ({
                 {method===0?
                 (<>À la livraison</>)
                 :
-                (<>Payé avec Paypal</>)
+                (<>Effectué</>)
                 }
             </div> 
             <div className={s.info}>
