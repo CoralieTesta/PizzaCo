@@ -1,0 +1,35 @@
+##Description
+
+Web application for customer to order pizzas, pasta and desserts.
+
+
+## Installation
+
+To install and run this project locally, follow these steps:
+
+1. Clone the repository to your local machine using the following command:
+   git clone https://github.com/CoralieTesta/PizzaCo.git
+2. Navigate to the 'backend' directory:
+  cd backend
+3. Install the required dependencies using a package manager like npm or yarn. Run the following command:
+  npm install
+  or
+  yarn install
+  This will install all the necessary packages and dependencies specified in the project's package.json file.
+4. Start the backend server
+  nodemon server
+5. On antother node, navigate to the 'frontend' directory:
+  cd frontend
+3. Install the required dependencies using a package manager like npm or yarn. Run the following command:
+  npm install
+  or
+  yarn install
+  This will install all the necessary packages and dependencies specified in the project's package.json file.
+4. On each of the API file, modify the BASE_URL by replacing "https://pizzaco.onrender.com/api/" by "http://localhost:3000/api/"
+5. Start the frontend server
+  npm start
+
+
+## License
+
+This project is licensed under the SSPL License - see the [LICENSE](LICENSE) file for details.
