@@ -16,12 +16,13 @@ import Desserts from './pages/User/Desserts/Desserts';
 import Pastas from './pages/User/Pastas/Pastas';
 import Contact from './pages/User/Contact/Contact';
 import OrderPage from './pages/User/OrderPage/OrderPage';
-import Admin from './pages/Admin/AdminLog/AdminLog';
 import AdminLog from './pages/Admin/AdminLog/AdminLog';
 import AdminPizzas from './pages/Admin/AdminPizzas/AdminPizzas';
 import AdminPasta from './pages/Admin/AdminPasta/AdminPasta';
 import AdminOrders from './pages/Admin/AdminOrders/AdminOrders';
 import AdminDesserts from './pages/Admin/AdminDesserts/AdminDesserts';
+import Booking from './pages/User/Booking/Booking';
+import AdminBookingsPage from './pages/Admin/AdminBookingsPage/AdminBookingsPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -40,12 +41,14 @@ root.render(
           <Route path='/desserts' element={<Desserts/>}/>
           <Route path='/dessert/:_id' element={<Dessert/>}/>
           <Route path='/contact' element={<Contact/>}/>
+          <Route path='/booking' element={<Booking/>}/>
           <Route path='/order/:_id' element={<OrderPage/>}/>
           <Route path='/adminLog' element={<AdminLog/>}/>
           <Route path='/adminPizzas' element={<AdminPizzas/>}/>
           <Route path='/adminPasta' element={<AdminPasta/>}/>
           <Route path='/adminOrders' element={<AdminOrders/>}/>
           <Route path='/adminDesserts' element={<AdminDesserts/>}/>
+          <Route path='/adminBookings' element={<AdminBookingsPage/>}/>
         </Route>
         <Route path='*' element={<PageNotFound/>} />
       </Routes>

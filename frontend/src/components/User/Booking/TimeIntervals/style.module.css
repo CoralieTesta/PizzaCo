@@ -1,0 +1,23 @@
+.container {
+    margin-top: 30px;
+}
+
+.archiveBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(251, 238, 172);
+    border: 1px solid orange;
+}
+
+.formItem {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.label {
+    margin-right: 5px;
+}

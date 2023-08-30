@@ -1,0 +1,59 @@
+.container {
+    margin-top: 30px;
+}
+
+.formItem {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.archiveBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(251, 238, 172);
+    border: 1px solid orange;
+}
+
+.archiveBtn:hover {
+    background-color: orange;
+}
+
+.label {
+    margin-right: 5px;
+}
+
+.validateBtn{
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(218, 230, 218);
+    border: 1px solid rgb(36, 66, 42);
+}
+
+.validateBtn:hover {
+    background-color:rgb(36, 66, 42);
+    color:white;
+    margin: auto;
+}
+
+.bookBtn {
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    background-color: rgb(16, 75, 61);
+    color:white;
+    width: 300px;
+    border-radius: 5px;
+}
+.bookBtn:hover {
+    background-color: rgb(9, 48, 38);
+}
+
+.link {
+    color: rgb(168, 24, 24);
+    text-decoration: underline;
+    cursor: pointer;
+}

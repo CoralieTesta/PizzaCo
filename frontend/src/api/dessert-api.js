@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "https://pizzaco.onrender.com/api/dessert"//"http://localhost:3000/api/dessert"
+const BASE_URL = "http://localhost:3000/api/dessert"//"https://pizzaco.onrender.com/api/dessert"
 
 export class DessertAPI {
     static async getAll() {
@@ -35,6 +35,13 @@ export class DessertAPI {
         const response = await axios.put(
             `${BASE_URL}/update/${_id}`, newDessert)
         return (
+            response.data
+        )
+    }
+
+    static async sendEmail() {
+        const response = await axios.post(`${BASE_URL}/sendEmail`)
+        return(
             response.data
         )
     }

@@ -7,6 +7,9 @@ const orderRoutes = require('./routes/order')
 const pastaRoutes = require('./routes/pasta')
 const pizzaRoutes = require('./routes/pizza')
 const dessertRoutes = require('./routes/dessert')
+const emailRoutes = require('./routes/email')
+const bookingSettingsRoutes = require('./routes/bookingSettings')
+const bookingRoutes = require('./routes/booking')
 
 require('dotenv').config();
 
@@ -35,5 +38,8 @@ app.use('/api/order', orderRoutes)
 app.use('/api/pizza', pizzaRoutes)
 app.use('/api/pasta', pastaRoutes)
 app.use('/api/dessert', dessertRoutes)
+app.use('/api/email', emailRoutes)
+app.use('/api/bookingSettings', bookingSettingsRoutes)
+app.use('/api/booking', bookingRoutes)
 
 module.exports = app

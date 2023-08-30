@@ -1,0 +1,11 @@
+.settingsContianer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.settingsContianer:hover {
+    color: rgb(106, 89, 89);
+}

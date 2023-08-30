@@ -1,0 +1,26 @@
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.btn {
+    width: 50%;
+    cursor: pointer;
+    border: none;
+    /*height: 30px;*/
+    font-size: 24px;
+    padding: 5px;
+    background-color: white;
+}
+
+.noBooking {
+    margin-top: 30px;
+}
+
+.ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }

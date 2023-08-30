@@ -50,6 +50,19 @@ export default function AdminNav() {
             </li>
             <li className={s.li}>
               <NavLink
+                to="/adminBookings"
+                className={s.link}
+                isActive={() => location.pathname === "/adminBookings"}
+                style={{
+                  color: location.pathname === "/adminBookings" ? "black" : "white",
+                }}
+              >
+                Réservations
+              </NavLink>
+            </li>
+            
+            <li className={s.li}>
+              <NavLink
                 to="/adminPizzas"
                 className={s.link}
                 isActive={() => location.pathname === "/adminPizzas"}

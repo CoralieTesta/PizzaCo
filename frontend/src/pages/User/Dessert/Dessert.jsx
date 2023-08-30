@@ -44,6 +44,11 @@ const Dessert = () => {
       }     
   }
   }, []);
+
+  async function sendEmailHandler() {
+    console.log("fct")
+    await DessertAPI.sendEmail()
+  }
   if(dessertItem) {
     return (
       <div>

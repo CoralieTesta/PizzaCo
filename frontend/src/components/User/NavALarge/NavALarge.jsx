@@ -76,6 +76,16 @@ export function NavALarge() {
           </li>
           <li className={s.li}>
             <NavLink
+              to="/booking"
+              className={s.link}
+              isActive={() => location.pathname === "/booking"}
+              style={{ color: location.pathname === "/booking" ? "black" : "white" }}
+            >
+              Réserver
+            </NavLink>
+          </li>
+          <li className={s.li}>
+            <NavLink
               to="/contact"
               className={s.link}
               isActive={() => location.pathname === "/contact"}

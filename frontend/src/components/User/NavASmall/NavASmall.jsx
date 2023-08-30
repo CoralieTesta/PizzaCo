@@ -104,6 +104,16 @@ export function NavASmall() {
                                 </NavLink>
                             </li>
                             <li className={s.li}>
+                                <NavLink to="/booking" className={s.link}>
+                                    <TbMessageCircle 
+                                        size={30} 
+                                        className={s.descriptiveIcon} 
+                                        style={{paddingBottom:"5px"}}
+                                    /> 
+                                    Réserver
+                                </NavLink>
+                            </li>
+                            <li className={s.li}>
                                 <NavLink to="/contact" className={s.link}>
                                     <TbMessageCircle 
                                         size={30} 

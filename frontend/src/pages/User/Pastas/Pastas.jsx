@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDesserts, setPasta, setPizzas, setQuantity, setTotal } from '../../../store/cart-slice'
 import PizzaLoader from '../../../components/User/PizzaLoader/PizzaLoader';
 import { setPastaListMenu } from '../../../store/menu-slice';
+import AdminBookingItem from '../../../components/Admin/Bookings/AdminBookingItem/AdminBookingItem';
 
 const Pastas = () => {
   const [pastaList, setPastaList] = useState()

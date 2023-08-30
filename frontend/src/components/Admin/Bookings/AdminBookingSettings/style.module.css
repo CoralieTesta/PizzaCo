@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.subContainer {
+  border-radius: 10px;
+  background-color: rgb(235, 218, 218);
+  margin-top: 30px;
+  padding: 30px 10px;
+  width: 90%;
+  max-width: 500px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+}
+
+.input {
+  text-align: center;
+}
+
+.h4 {
+  margin-bottom: 10px;
+}
+
+.archiveBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(251, 238, 172);
+  border: 1px solid orange;
+}
+
+.archiveBtn:hover {
+  background-color: orange;
+}

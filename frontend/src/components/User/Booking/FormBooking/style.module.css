@@ -1,0 +1,79 @@
+.container {
+    max-width: 90%;
+    width: 600px;
+    margin: auto;
+    /*color: rgba(0, 128, 0, 0.217);*/
+}
+
+.text {
+    font-size: 20px;
+}
+
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+.fadeInDown {
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+
+.title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form {
+    background-color: rgb(235, 218, 218);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.formItem {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.label {
+    margin-right: 5px;
+}
+
+.validateBtn{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(218, 230, 218);
+    border: 1px solid rgb(36, 66, 42);
+}
+.validateBtn:hover {
+    background-color:rgb(36, 66, 42);
+    color:white;
+}
+
+.archiveBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(251, 238, 172);
+    border: 1px solid orange;
+}
+
+.archiveBtn:hover {
+    background-color: orange;
+}
